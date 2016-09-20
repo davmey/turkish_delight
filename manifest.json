@@ -1,15 +1,22 @@
 {
-  "manifest_version": 0,
+  "manifest_version": 13,
   "name": "Turkish Delight",
   "version": "0.1",
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["whitewitch.js"]
+      "js": ["wardrobe.js"]
     }
   ],
+  "web_accessible_resources": [
+    "edmond.js"
+   ],
   "background": {
-    "scripts": ["edmond.js"]
+    "scripts": [
+      "wardrobe.js",
+      "edmond.js",
+      "whitewitch.js"
+    ]
   },
   "browser_action": {
     "default_icon": "icon.png",
